@@ -1,0 +1,341 @@
+@font-face {
+  font-family: Sepahbod;
+  src: url(../Fonts/Sepahbod.otf);
+}
+* {
+  font-size: 30px;
+}
+button {
+  cursor: pointer;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../Backgrounds/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  height: 100%;
+}
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 161px;
+  border-radius: 100px;
+}
+.header-column {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
+  background-color: rgb(0, 0, 0, 0.6);
+  color: wheat;
+}
+#toggle-bg-music-btn {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  color: wheat;
+  font-size: 45px;
+}
+#toggle-bg-music-btn img {
+  width: 45px;
+  height: 45px;
+}
+#home-page-btn {
+  position: absolute;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+}
+#home-page-btn img {
+  width: 45px;
+  height: 45px;
+}
+#logo-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+#logo-text {
+  font-size: 40px;
+  font-family: Sepahbod;
+  margin-right: 10px;
+}
+#logo img {
+  width: 45px;
+  height: 45px;
+}
+#coins {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 80px;
+  color: wheat;
+  font-size: 30px;
+  font-family: Sepahbod;
+  margin-left: 10px;
+}
+#coins img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+#home-page {
+  width: 100%;
+  height: calc(100vh - 161px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#button-container button {
+  width: 200px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: burlywood;
+  font-family: Sepahbod;
+  margin: 10px 0;
+}
+#game-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0 auto;
+}
+#guess-input {
+  width: 400px;
+  height: 50px;
+  margin: 20px 0;
+  border-radius: 20px;
+  border: 0;
+  background-color: lemonchiffon;
+  text-align: center;
+  z-index: 1;
+  font-family: Sepahbod;
+  font-size: 30px;
+  color: black;
+}
+input:focus {
+  outline: 0;
+  border: 0;
+}
+#word {
+  width: 99%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.letter-input {
+  width: 50px;
+  margin: 5px 5px;
+  padding: 3px;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  background-color: sienna;
+  font-family: Sepahbod;
+  font-size: 30px;
+}
+#keyboard {
+  width: calc(100% - 20px);
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#keys-container {
+  width: calc(100% - 95px);
+}
+
+.key {
+  height: 60px;
+  margin: 2px 2px;
+  text-align: center;
+  background-color: #2f9d3c;
+  color: black;
+  font-family: Sepahbod;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 5px;
+}
+.key:hover {
+  color: goldenrod;
+  transition: color 0.5s;
+}
+#backspace-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 0 0 5px;
+  padding: 0;
+  background-color: #c59f71;
+  cursor: pointer;
+}
+#backspace-key img {
+  width: 70px;
+  height: 70px;
+}
+#letter-box-container {
+  display: flex;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  justify-content: center;
+  direction: rtl;
+}
+.box {
+  height: 55px;
+  border: 2px black solid;
+  text-align: center;
+  background-color: rgba(165, 241, 246, 0.5);
+  font-family: Sepahbod;
+  font-size: 30px;
+  color: black;
+  overflow: visible;
+  white-space: nowrap;
+}
+.box:focus {
+  border: 2px black solid;
+}
+#level-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Sepahbod;
+  font-size: 40px;
+}
+#level-display img {
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+}
+
+#shop-section {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.shop-section-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  background-color: goldenrod;
+  cursor: pointer;
+}
+.shop-section-btn img {
+  width: 40px;
+  height: 40px;
+}
+#hint-container {
+  width: fit-content;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  font-family: Sepahbod;
+  color: mediumslateblue;
+  background-color: #180000;
+  opacity: 0.9;
+  padding: 4px 3px;
+  border-radius: 5px;
+}
+#hint-container img {
+  width: 30px;
+  height: 30px;
+}
+#msg-box {
+  width: fit-content;
+  height: 45px;
+  padding: 0 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Sepahbod;
+  font-size: 30px;
+  background-color: #180000;
+  color: white;
+}
+#msg-box img {
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+}
+@media screen and (max-width: 600px) {
+  #container {
+    width: 100% !important;
+  }
+  header {
+    width: 100%;
+    border-radius: 0;
+  }
+  #level-display {
+    font-size: 30px;
+  }
+  #game-container {
+    width: 100%;
+    margin: 30px auto 0 auto;
+  }
+  #guess-input {
+    width: 95%;
+    font-size: 30px;
+  }
+}
